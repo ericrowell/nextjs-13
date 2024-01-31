@@ -6,7 +6,8 @@
     "skipLibCheck": true,
     "strict": true,
     "forceConsistentCasingInFileNames": true,
-    "noEmit": true,
+    "noEmit": false, // changed this to false 
+    "outDir": "dist", // includes path to the directory where to put compiled JavaScript files
     "esModuleInterop": true,
     "module": "esnext",
     "moduleResolution": "node",

@@ -1,6 +1,2 @@
-module.exports = {
-  plugins: {
-    tailwindcss: {},
-    autoprefixer: {},
-  },
-}
+// typings.d.ts
+declare module "*.css"
