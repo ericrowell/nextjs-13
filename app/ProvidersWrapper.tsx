@@ -1,7 +1,7 @@
 "use client";
-import { NextUIProvider } from "@nextui-org/react";
 import { SessionProvider } from "next-auth/react";
 import { ThemeProvider as NextThemesProvider } from "next-themes";
+import { AppBar, Toolbar, Typography } from "@material-ui/core";
 
 export default function ProvidersWrapper({
   children,
@@ -11,7 +11,13 @@ export default function ProvidersWrapper({
   return (
     <SessionProvider>
       <NextThemesProvider defaultTheme="system" attribute="class">
-        <NextUIProvider>{children}</NextUIProvider>
+        <AppBar position="static">
+          <Toolbar>
+            <Typography variant="h6">
+              {children}
+            </Typography>
+          </Toolbar>
+        </AppBar>
       </NextThemesProvider>
     </SessionProvider>
   );
