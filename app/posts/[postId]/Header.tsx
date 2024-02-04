@@ -1,7 +1,13 @@
+import { AppBar, Toolbar, Typography } from '@mui/material';
+
 export default function Header() {
   return (
-    <h1 className="font-bold text-5xl text-transparent bg-clip-text bg-gradient-to-r from-purple-500 via-pink-500 to-pink-500">
-      Thread
-    </h1>
+    <AppBar position="static">
+      <Toolbar>
+        <Typography variant="h6" component="div" sx={{ flexGrow: 1 }}>
+          Thread
+        </Typography>
+      </Toolbar>
+    </AppBar>
   );
 }

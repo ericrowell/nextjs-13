@@ -1,7 +1,13 @@
+import { AppBar, Toolbar, Typography } from '@material-ui/core';
+
 export default function Header() {
   return (
-    <h1 className="font-bold text-5xl text-transparent bg-clip-text bg-gradient-to-r from-purple-500 via-pink-500 to-pink-500">
-      Feed
-    </h1>
+    <AppBar position="static">
+      <Toolbar>
+        <Typography variant="h6"> 
+          Feed
+        </Typography>
+      </Toolbar>
+    </AppBar>
   );
 }
