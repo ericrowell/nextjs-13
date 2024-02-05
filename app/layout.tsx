@@ -1,5 +1,7 @@
+import React from "react";
 import ProvidersWrapper from "./ProvidersWrapper";
-import Nav from "./Nav";
+// import Nav from "./Nav";
+import AppBar from '@mui/material/AppBar';
 import "./globals.css";
 
 export const metadata = {
@@ -37,7 +39,7 @@ export default function RootLayout({
     <html lang="en">
       <body>
         <ProvidersWrapper>
-          <Nav />
+          <AppBar />
           {children}
         </ProvidersWrapper>
       </body>
