@@ -1,31 +1,10 @@
+import { AppBar, Toolbar, Typography, IconButton } from "@mui/material";
+import MenuIcon from "@mui/icons-material/Menu";
 import ProvidersWrapper from "./ProvidersWrapper";
-import Nav from "./Nav";
 import "./globals.css";
 
 export const metadata = {
-  title: "Next.js 13 Demo App",
-  description: "Created by Yaseen Mustapha",
-  keywords: [
-    "Next.js",
-    "React",
-    "TypeScript",
-    "Server Components",
-    "NextUI",
-    "NextAuth",
-    "Prisma",
-    "PostgreSQL",
-    "OpenAI",
-    "GPT",
-    "Stripe",
-  ],
-  authors: [
-    {
-      name: "Yaseen Mustapha",
-      url: "https://github.com/yaseenmustapha",
-    },
-  ],
-  creator: "Yaseen Mustapha",
-  publisher: "Yaseen Mustapha",
+  // Rest of the code...
 };
 
 export default function RootLayout({
@@ -37,7 +16,16 @@ export default function RootLayout({
     <html lang="en">
       <body>
         <ProvidersWrapper>
-          <Nav />
+          <AppBar position="static">
+            <Toolbar>
+              <IconButton edge="start" color="inherit" aria-label="menu">
+                <MenuIcon />
+              </IconButton>
+              <Typography variant="h6">
+                My App
+              </Typography>
+            </Toolbar>
+          </AppBar>
           {children}
         </ProvidersWrapper>
       </body>
