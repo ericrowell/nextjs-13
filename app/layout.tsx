@@ -1,5 +1,5 @@
 import ProvidersWrapper from "./ProvidersWrapper";
-import Nav from "./Nav";
+import { AppBar, Toolbar, Typography } from '@mui/material';
 import "./globals.css";
 
 export const metadata = {
@@ -37,7 +37,13 @@ export default function RootLayout({
     <html lang="en">
       <body>
         <ProvidersWrapper>
-          <Nav />
+          <AppBar position="static">
+            <Toolbar>
+              <Typography variant="h6" component="div">
+                MUI AppBar Component
+              </Typography>
+            </Toolbar>
+          </AppBar>
           {children}
         </ProvidersWrapper>
       </body>

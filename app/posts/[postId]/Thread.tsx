@@ -1,6 +1,8 @@
 "use client";
 import { Spacer } from "@nextui-org/react";
-import Header from "./Header";
+import AppBar from '@material-ui/core/AppBar';
+import Toolbar from '@material-ui/core/Toolbar';
+import Typography from '@material-ui/core/Typography';
 import Post from "../Post";
 import Comment from "./Comment";
 import AddComment from "./AddComment";
@@ -26,7 +28,13 @@ export default function Thread({
   return (
     <div className="container mx-auto px-6 sm:px-8 md:px-16 lg:px-20 max-w-3xl mt-6 items-center">
       <Spacer y={0.5} />
-      <Header />
+      <AppBar position="static">
+        <Toolbar>
+          <Typography variant="h6" noWrap>
+            My App Title
+          </Typography>
+        </Toolbar>
+      </AppBar>
       <Post
         key={post.id}
         userId={post.user.id}

@@ -2,7 +2,9 @@
 import { Spacer } from "@nextui-org/react";
 import { Comment, Like, User } from "@prisma/client";
 import AddPost from "./AddPost";
-import Header from "./Header";
+import AppBar from '@mui/material/AppBar';  //import AppBar here
+import Toolbar from '@mui/material/Toolbar';
+import Typography from '@mui/material/Typography';
 import Post from "./Post";
 
 export default function Feed({
@@ -26,7 +28,13 @@ export default function Feed({
     <main>
       <div className="container mx-auto px-6 sm:px-8 md:px-16 lg:px-20 max-w-3xl mt-6 items-center">
         <Spacer y={0.5} />
-        <Header />
+        <AppBar position="static">
+          <Toolbar>
+            <Typography variant="h6" component="div">
+              My App Title
+            </Typography>
+          </Toolbar>
+        </AppBar>    {/* Replaced the Header component here with MUI's AppBar */}
         <AddPost />
 
         {posts?.map((post) => (
