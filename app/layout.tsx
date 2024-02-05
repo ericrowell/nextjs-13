@@ -1,5 +1,7 @@
 import ProvidersWrapper from "./ProvidersWrapper";
-import Nav from "./Nav";
+import AppBar from "@mui/material/AppBar";
+import Toolbar from "@mui/material/Toolbar";
+import Typography from "@mui/material/Typography";
 import "./globals.css";
 
 export const metadata = {
@@ -37,7 +39,13 @@ export default function RootLayout({
     <html lang="en">
       <body>
         <ProvidersWrapper>
-          <Nav />
+          <AppBar position="static">
+            <Toolbar>
+              <Typography variant="h6">
+                Next.js 13 Demo App
+              </Typography>
+            </Toolbar>
+          </AppBar>
           {children}
         </ProvidersWrapper>
       </body>
